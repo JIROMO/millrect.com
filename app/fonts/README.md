@@ -13,14 +13,15 @@ Millrect uses **[Gen Interface JP](https://gen.typesetting.jp/)** (SIL OFL 1.1) 
 
 Version: **0.5.0** (see [releases](https://github.com/yamatoiizuka/gen-interface-jp/releases)).
 
-## Update
+## Fetch / update
 
-This public website repository commits the font binaries because they are served
-directly by the static site and browser app.
+Font binaries may not be committed to Git. After clone:
 
-When updating the fonts, replace the TTF files in `app/fonts/` and the WOFF2
-files in `docs/fonts/` and `site/fonts/` from the same Gen Interface JP release,
-then update the version above if needed.
+```bash
+npm run fonts:fetch
+```
+
+This downloads TTF into `app/fonts/` and WOFF2 into `docs/fonts/` and `site/fonts/`.
 
 Project fonts added via Google Fonts / Fontsource at runtime are subject to their respective licenses.
 
@@ -28,4 +29,8 @@ Project fonts added via Google Fonts / Fontsource at runtime are subject to thei
 
 同梱フォントは **Gen Interface JP** のみです。
 
-この静的サイト用リポジトリでは、配信用のフォントバイナリをコミットしています。
+初回セットアップ:
+
+```bash
+npm run fonts:fetch
+```
